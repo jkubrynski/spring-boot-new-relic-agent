@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.7.RELEASE</version>
+		<version>1.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -26,13 +26,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.newrelic.agent.java</groupId>
 			<artifactId>newrelic-agent</artifactId>
-			<version>3.21.0</version>
+			<version>3.25.0</version>
 		</dependency>
 		
 		<dependency>
@@ -56,6 +56,7 @@
 						</goals>
 						<configuration>
 							<includeArtifactIds>newrelic-agent</includeArtifactIds>
+							<excludes>newrelic.yml</excludes>
 							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
 						</configuration>
 					</execution>
